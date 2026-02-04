@@ -47,21 +47,21 @@
 //     return 0;
 // }
 // while using diff header files you need to link them first in via command line since gcc 
-//doesn't automatically link them. ---for here, gcc basic.c -lm -o basic.
-//do not redeclare same variable again and again in a scope will cause compiler error
-//---e.g. int area; then again after line 4 int area=32;   {two time variable declaration.}
+// //doesn't automatically link them. ---for here, gcc basic.c -lm -o basic.
+// //do not redeclare same variable again and again in a scope will cause compiler error
+// //---e.g. int area; then again after line 4 int area=32;   {two time variable declaration.}
 
 
-#include <stdio.h>
+// #include <stdio.h>
 
-void main(){
-    float principal,rate,time=0;   //adding 0 value by default to avoid garbage values.
-    printf("Enter the original amount borrowed or invested: \t");
-    scanf("%f",&principal);
-    printf("Enter the annual interest rate:\t");
-    scanf("%f",&rate);
-    printf("Enter the duration the money is borrowed or invested in years:\t");
-    scanf("%f",&time);
-    float simple=(principal*rate*time)/100;
-    printf("Your calculated simple interest for the amount is %.2f.\n",simple);
-}
+// void main(){
+//     float principal,rate,time=0;   //adding 0 value by default to avoid garbage values.
+//     printf("Enter the original amount borrowed or invested: \t");
+//     scanf("%f",&principal);
+//     printf("Enter the annual interest rate:\t");
+//     scanf("%f",&rate);
+//     printf("Enter the duration the money is borrowed or invested in years:\t");
+//     scanf("%f",&time);
+//     float simple=(principal*rate*time)/100;
+//     printf("Your calculated simple interest for the amount is %.2f.\n",simple);
+// }
