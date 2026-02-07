@@ -41,8 +41,8 @@ Grade D if marks >= 35
 Fail, otherwise.*/
 
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
 // int main(){
 //     int x;
@@ -107,6 +107,8 @@ using namespace std;
 //     }
 // }
 
+
+
 // int main(){
 //     for (int i=0 ; i<5;i++)
 //     {
@@ -119,13 +121,28 @@ using namespace std;
 //     }
 // }
 
+
+
+// int main(){
+//     for (int i=0 ; i<5;i++)
+//     {
+//         cout<<"\n";
+//         for (int j=0;j<5-i;j++){ 
+//               //this will run completely first.
+//             cout<<j;  
+//         }
+//     }
+// }
+
+#include <iostream>
+using namespace std;
+
 int main(){
-    for (int i=0 ; i<5;i++)
-    {
+    for(int i=0;i<5;i++){
         cout<<"\n";
-        for (int j=0;j<5-i;j++){ 
-              //this will run completely first.
-            cout<<j;  
+        for(int j=0;j<5-i;j++){
+            cout<<j+1;
         }
     }
+    cout<<"\n";
 }
