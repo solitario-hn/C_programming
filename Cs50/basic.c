@@ -205,18 +205,175 @@
 // Write a C program to check whether a number
 // is even or odd
 
+// #include <stdio.h>
+
+// int main(){
+//     int num;
+//     printf("Enter the integer to be checked:\t");
+//     scanf("%d",&num);
+//     //if numbers remained is 0(i.e. completely divisible by 0 it is even.)
+//     if (num%2==0){
+//         printf("%d is EVEN.\n",num);
+//     }
+//     else{
+//         printf("%d is ODD.\n",num);
+//     }
+//     return 0;
+// }
+
+
+// Write a C program to check whether a given
+// year is Leap year or not
+
+// #include <stdio.h>
+
+// void main(){
+//     int year;
+//     printf("Enter the year to be checked:\t");
+//     scanf("%d",&year);
+//     //if year is divisible completely by 4 and 100 or 400 it is a leap year.
+//     if (year%4==0&&year%100||year%400==0){
+//         printf("%d is a leap year.\n",year);
+//     }
+//     else{
+//         printf("%d is not a leap year.\n",year);
+//     }
+
+// }
+
+// (a)Write a C program to check whether a
+// triangle is Equilateral,scalene,or isosceles
+
+// #include <stdio.h>
+
+// void main(){
+//     float a,b,c;
+//     printf("Enter the sides of the triangle to be checked:\t");
+//     scanf("%f%f%f",&a,&b,&c);
+//     if(a==b&&b==c&&c==a){
+//         printf("It is a equilateral triangle.\n");}    //using && and operator to check. 
+//     else if(a==b||b==c||c==a){
+//         printf("It is an isosceles triangle.\n");}     //using || or operator.
+//     else{
+//         printf("It is a scalene triangle.\n");}
+// }
+
+// (b)Write a C program to check whether a
+// triangle is right angles,obtuse,acute triangle
+
+// #include <stdio.h>
+// void main(){
+//     int a,b,c;
+//     printf("Enter the sides to be checked:\t");
+//     scanf("%d%d%d",&a,&b,&c);
+//     //making sure c is the longest side using ternary operator.
+//     c=(a>b)?((a>c)?a:c):((b>c)?b:c);
+//     if ((a*a)+(b*b)==c*c){                  //using pythagoras theorem to check.
+//         printf("It is a right angled triangle.\n");
+//     }
+//     else if ((a*a)+(b*b)>c*c){
+//         printf("It is an acute angled triangle.\n");
+//     }
+//     else{
+//         printf("It is an obtuse angled triangle.\n");
+//     }
+// }
+
+
+// Write a C program to convert temperature from Fahrenheit to Celsius and Celsius to Fahrenheit (User must provide the choice of type of temperature)
+
+// #include <stdio.h>
+
+// void c_to_f(int temp);
+// void f_to_c(int temp);
+// void main(){
+//     int choice,temp;
+//     printf("Enter 0 to convert fahrenheit to celsius and 1 to convert celsius to fahrenheit:\t");
+//     scanf("%d",&choice);
+//     printf("Enter the temperature:\t");
+//     scanf("%d",&temp);
+//     if(choice==0){
+//         f_to_c(temp);
+//     }
+//     else if(choice==1){
+//         c_to_f(temp);
+//     }
+//     else{
+//         printf("Invalid Choice!\n");
+//     }
+// }
+
+// void f_to_c(int temp){
+//     float cel;
+//     cel=(temp-32)*(5.0/9.0);   //since C does integer division we need to write float type numbers 9.0 instead of 9 to get floating values.
+//     printf("Temperature in  degree celsius is %.2f\n",cel);
+// }
+
+// void c_to_f(int temp){
+//     float cel;
+//     cel=(temp*(9.0/5.0)+32);
+//     printf("Temperature in degree fahrenheit is %.2f\n",cel);
+// }
+
+// (a)Write a C program to check whether a
+// character is an alphabet, digit
+
+// #include <stdio.h>
+
+// void main(){
+//     char check;
+//     printf("Enter the character to be checked:\t");
+//     scanf("%c",&check);
+//     if(check>='A'&&check<='Z'||check>='a'&&check<='z'){
+//         printf("%c is an alphabet.\n",check);
+//     }
+//     else{
+//         printf("%c is a digit.\n",check);
+//     }
+// }
+
+// (a)	Write a C program to check whether an alphabet is a vowel or consonant.
+
+// #include <stdio.h>
+// #include <ctype.h>
+// void main(){
+//     char ch,check;
+//     printf("Enter the alphabet to be checked:\t");
+//     scanf("%c",&ch);
+//     check=tolower(ch); //converting alphabet to lowercase to check using ctype.h
+//     if(check=='a'||check=='i'||check=='o'||check=='e'||check=='u'){
+//         printf("%c is a vowel.\n",ch);
+//     }
+//     else{
+//         printf("%c is consonant.\n",ch);
+//     }
+// }
+
+//(a)Write a C program tofind smallestof two number
+
+// #include <stdio.h>
+
+// void main(){
+//     float a,b;
+//     printf("Enter the two numbers to be checked.\n");
+//     scanf("%f%f",&a,&b);
+//     if(a>b){    //using relational operator to check.
+//         printf("%.2f is greater than %.2f\n",a,b);
+//     }
+//     else{
+//         printf("%.2f is greater than %.2f\n",b,a);
+//     }
+// }
+
+//(b)Write a C program to find largest of three numbers
+
 #include <stdio.h>
 
-int main(){
-    int num;
-    printf("Enter the integer to be checked:\t");
-    scanf("%d",&num);
-    //if numbers remained is 0(i.e. completely divisible by 0 it is even.)
-    if (num%2==0){
-        printf("%d is EVEN.\n",num);
-    }
-    else{
-        printf("%d is ODD.\n",num);
-    }
-    return 0;
+void main(){
+    float a,b,c,largest;
+    printf("Enter the three numbers to be checked.\n");
+    scanf("%f%f%f",&a,&b,&c);
+    //using ternary operator to check
+    largest=(a>b)?((a>c)?a:c):((b>c)?b:c);
+    printf("The largest number is %.2f\n",largest);
 }
