@@ -367,13 +367,88 @@
 
 //(b)Write a C program to find largest of three numbers
 
+// #include <stdio.h>
+
+// void main(){
+//     float a,b,c,largest;
+//     printf("Enter the three numbers to be checked.\n");
+//     scanf("%f%f%f",&a,&b,&c);
+//     //using ternary operator to check
+//     largest=(a>b)?((a>c)?a:c):((b>c)?b:c);
+//     printf("The largest number is %.2f\n",largest);
+// }
+
+// Write a program in C to implement Simple
+// Calculator.
+
+// #include <stdio.h>
+
+// void main(){
+//     int a,b;
+//     char choice;
+//     printf("Enter the numbers you wish to operate on:\t");
+//     scanf("%d%d",&a,&b);
+//     printf("Enter operation to perform.\n'+' to add.\n'-' to subtract.\n'/' to divide.\n'*' to multiply.\n");
+//     scanf(" %c",&choice);  //need to add a space in format specifier so scanf doesn't ready \n as an input.
+//     switch(choice){    //using ' ' switch operator would take the ascii value.
+//         case '+': 
+//         printf("The sum is:%d\n",a+b);
+//         break;
+//         case '-':
+//         printf("The difference is:%d\n",a-b);
+//         break;
+//         case '/':
+//         printf("The division is:%d\n",a/b);
+//         break;
+//         case '*':
+//         printf("The product is:%d\n",a*b);
+//         break;
+//         default:
+//         printf("INVALID CHOICE!\n");     
+//     }
+// }
+
+//WAP to calculate the root of a Quadratic Equation
+
+// #include <stdio.h>
+// #include <math.h>  //linking math header file to use sqrt built in function
+
+// void main(){
+//     double root1,root2,coeff_x,coeff_x_sqr,constant,discrimant;
+//     printf("Enter the coefficient of x square,x and constant: ");
+//     scanf("%lf%lf%lf",&coeff_x_sqr,&coeff_x,&constant);
+//     printf("The equation is : (%.2lfx²)+(%.2lfx)+(%.2lf)\n",coeff_x_sqr,coeff_x,constant);
+//     discrimant=(coeff_x*coeff_x)-(4*coeff_x_sqr*constant);
+//     //calculating real roots on basis of discriminant. 
+//     if (discrimant>=0){
+//     root1=(-coeff_x+sqrt(discrimant))/(2*coeff_x_sqr);
+//     root2=(-coeff_x-sqrt(discrimant))/(2*coeff_x_sqr);
+//     printf("The roots of the equation are %.2lf and %.2lf\n",root1,root2);
+//     }
+//     else{
+//         printf("Roots are imaginary and complex.\n");
+//     }
+// }
+
+// WAP to to accept a coordinate point in a XY
+// coordinate system and determine in which
+// quadrant the coordinate point lies.
 #include <stdio.h>
 
 void main(){
-    float a,b,c,largest;
-    printf("Enter the three numbers to be checked.\n");
-    scanf("%f%f%f",&a,&b,&c);
-    //using ternary operator to check
-    largest=(a>b)?((a>c)?a:c):((b>c)?b:c);
-    printf("The largest number is %.2f\n",largest);
+    float x,y;
+    printf("Enter the coordinate points x and y respectively:\n");
+    scanf("%f%f",&x,&y);
+    if (x>0&&y>0){
+        printf("(%.2f,%.2f) Point is in the first quadrant.\n",x,y);
+    }
+    else if (x<0&&y>0){
+        printf("(%.2f,%.2f) Point is in the second quadrant.\n",x,y);
+    }
+    else if (x<0&&y<0){
+        printf("(%.2f,%.2f) Point is in the third quadrant.\n",x,y);
+    }
+    else{
+        printf("(%.2f,%.2f) Point is in the fourth quadrant .\n",x,y);
+    }
 }
