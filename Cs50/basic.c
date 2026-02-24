@@ -598,31 +598,67 @@
 // Write a program in C to accept an integer number and find reverse of this number and 
 // check this number for palindrome.
 
+// #include <stdio.h>
+
+// void main(){
+//     int original_num,num,rem,reverse=0;
+//     printf("Enter the integer number to reverse and check:\t");
+//     scanf("%d",&num);
+//     original_num=num;  //storing value to compare later.
+//     if(num<0){
+//         num*=-1;
+//     }
+
+//     while(num!=0){  //e.g num=9765
+//         rem=num%10;    //first extracting the last digits.(remainder)   //9765%10=5
+//         num=num/10;   //removing the last digit from the number.(quotient)  //9765/10=976
+//         reverse=reverse*10+rem; //since the last digit extracted will be constant , in reverse it will be tens places further. 
+//         //num=9765 (9000+700+60+5)  rev=5679 
+//         //1.(0*10+5=5) 2.(5*10*6=56) 3.(56*10+7=567) 4.(567*10+9=5679)      
+//     }
+//     printf("The reversed number is: %d\n",reverse);
+
+//     //if a num is palindrome , number==reverse.
+//     if(original_num==reverse){
+//         printf("%d is a palindrome.\n",original_num);
+//     }
+//     else{
+//         printf("%d is not a palindrome\n",original_num);
+//     }
+// }
+
+// Write a program in C to accept an integer
+// number and to check a number is Armstrong or
+// not
+
+// An Armstrong number (or narcissistic number) is a positive integer that equals the sum of its own digits,
+//  each raised to the power of the total number of digits in that integer
+
 #include <stdio.h>
-
+#include <math.h>
 void main(){
-    int original_num,num,rem,reverse=0;
-    printf("Enter the integer number to reverse and check:\t");
+    int original_num,num,digits=0,rem=0,sum=0;
+    printf("Enter number to check:\t");
     scanf("%d",&num);
-    original_num=num;  //storing value to compare later.
-    if(num<0){
-        num*=-1;
+    original_num=num;   //to compare original number later
+    //counting the number of digits in the number
+    while(num!=0){
+        rem=num%10;   //gives the last digit.
+        num=num/10;   //as soon as only const is remaining decimal division makes num==0 loop stops.
+        digits+=1;
+    }
+    num=original_num;  //re-setting the num value.
+    //An Armstrong number equals the sum of its own digits raised to power of the total number of digits.
+    while(num!=0){
+        rem=num%10;
+        num=num/10;
+        sum+=pow(rem,digits);
     }
 
-    while(num!=0){  //e.g num=9765
-        rem=num%10;    //first extracting the last digits.(remainder)   //9765%10=5
-        num=num/10;   //removing the last digit from the number.(quotient)  //9765/10=976
-        reverse=reverse*10+rem; //since the last digit extracted will be constant , in reverse it will be tens places further. 
-        //num=9765 (9000+700+60+5)  rev=5679 
-        //1.(0*10+5=5) 2.(5*10*6=56) 3.(56*10+7=567) 4.(567*10+9=5679)      
-    }
-    printf("The reversed number is: %d\n",reverse);
-
-    //if a num is palindrome , number==reverse.
-    if(original_num==reverse){
-        printf("%d is a palindrome.\n",original_num);
+    if(sum==original_num){
+        printf("%d is an Armstrong number.\n",original_num);
     }
     else{
-        printf("%d is not a palindrome\n",original_num);
+        printf("%d is not an Armstrong number.\n",original_num);
     }
 }
