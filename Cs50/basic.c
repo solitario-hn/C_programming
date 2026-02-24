@@ -433,22 +433,196 @@
 // WAP to to accept a coordinate point in a XY
 // coordinate system and determine in which
 // quadrant the coordinate point lies.
+// #include <stdio.h>
+
+// void main(){
+//     float x,y;
+//     printf("Enter the coordinate points x and y respectively:\n");
+//     scanf("%f%f",&x,&y);
+//     if (x>0&&y>0){
+//         printf("(%.2f,%.2f) Point is in the first quadrant.\n",x,y);
+//     }
+//     else if (x<0&&y>0){
+//         printf("(%.2f,%.2f) Point is in the second quadrant.\n",x,y);
+//     }
+//     else if (x<0&&y<0){
+//         printf("(%.2f,%.2f) Point is in the third quadrant.\n",x,y);
+//     }
+//     else{
+//         printf("(%.2f,%.2f) Point is in the fourth quadrant .\n",x,y);
+//     }
+// }
+
+// Write a program to find gross salary of employee
+// if DA is 40% of basic Salary and HRA is 20% of
+// basic salary. Basic salary will be entered as input
+// by keyboard.
+
+// #include <stdio.h>
+
+// void main(){
+//     float basic,hra,da,gross;
+//     printf("Enter the basic salary of the emploee:\t");
+//     scanf("%f",&basic);
+//     da=0.4*basic;  //da is 40% ,i.e. 40/100 of basic salary.
+//     hra=0.2*basic; //hra is 20% , i.e. 20/100 of basic salary.
+//     gross=basic+da+hra;
+//     printf("The gross salary of employee is:₹%.2f\n",gross);
+// }
+
+// Write a program in C to calculate and print the
+// Electricity bill of a given customer. The customer
+// id and unit consumed by the user should be taken
+// from the keyboard and
+// displaythetotalamounttopaytothe customer
+
+// #include <stdio.h>
+
+// void main() {
+//     int id, units_consumed;
+//     float amt;
+
+//     printf("Enter the Customer ID: \t");
+//     scanf("%d", &id);
+//     printf("Enter the Input units consumed: \t");
+//     scanf("%d", &units_consumed);
+
+//     // Calculate rates based on units (e.g., up to 100 units, 100-200, etc.)
+//     if (units_consumed <= 100){
+//         amt = units_consumed * 1.20;}
+//     else if (units_consumed <=200) {
+//         amt = (100*1.20) +(units_consumed-100)*1.50;}
+//     else{
+//         amt = (100*1.20)+(100*1.50)+(units_consumed-200)*2;}
+
+//     printf("Customer ID: %d\nUnits Consumed:%d\nTotal Amount: %.2f\n", id, units_consumed,amt);
+// }
+
+
+// A library charges a fine forevery book returned
+// late. For first 5 days the fine is 50 paisa,for6-10
+// days, fine is one rupee and above10days, fineis 5
+// rupees. If you return the book after 30 days
+// your membership will be cancelled. Write a
+// program to accept the number of days the
+// member is late to return the book and display
+// the fine or appropriate message
+
+// #include <stdio.h>
+
+// void main(){
+//     int days,books;
+//     float fine;
+//     printf("Enter number of books issued:\t");
+//     scanf("%d",&books);
+//     printf("Days member is late to return the book:\t");
+//     scanf("%d",&days);
+//     if(days<=5){
+//         fine=0.50*books;      //50 paisa = 0.5 rs.
+//         printf("Your fine is ₹%.2f\n",fine);
+//     }
+//     else if(days>=6&&days<=10){
+//         fine=1*books; 
+//         printf("Your fine is ₹%.2f\n",fine);
+//     }
+//     else if(days>=11&&days<=30){
+//         fine=5*books;
+//         printf("Your fine is ₹%.2f\n",fine);
+//     }
+//     else{
+//         printf("Oops! Your membership is cancelled. You missed the last dealine.\n");
+//     }
+// }
+
+// Write a program to find the factorial of any number.
+
+// #include <stdio.h>
+// void main(){
+//     int number,factorial=1; //setting initial value 1 to avoid garbage values.
+//     printf("Enter the number to find the factorial:\t");
+//     scanf("%d",&number);
+//     //using for loop to multiply again and again.
+//     if(number==0){
+//         printf("%d factorial is 1.\n",number);
+//     }
+//     else{
+//         for(int i=1;i<=number;i++){
+//             factorial*=i;
+//     }
+//     printf("%d factorial is %d.\n",number,factorial);}
+// }
+
+// Write aprogramtoprintFibonaccisequence
+// 011235813……Ntermsandprintsthesum of
+// sequence.
+
+// #include <stdio.h>
+
+// void main(){
+//     int term1=0,term2=1,next,sum=1,terms;  //since fibonacci series starts from 0 and 1. , initial sum=0+1=1.    
+//     printf("Enter the numbers of terms for the fibonacci series:\t");
+//     scanf("%d",&terms);
+//     printf("%d,%d,",term1,term2);
+//     //The Fibonacci series is a sequence where each number is the sum of the two preceding ones.
+//     for(int i=1;i<=terms;i++){    
+//         next=term1+term2;     //next term will be the sum of prev two terms.
+//         term1=term2;          //now prev term 2 will be term 1.
+//         term2=next;           //and the next term will be term 2 for the next term to come.
+//         sum+=next;
+//         printf("%d,",next);
+//     }
+//     printf("\nSum of the first %d terms of fibonacci series: %d\n",terms,sum);
+// }
+
+// Write a program in C to accept an integer number and find sum of digits
+
+// #include <stdio.h>
+
+// void main(){
+//     int num,sum=0,rem=0;  //setting initital value of sum=0 to avoid garbage values.
+    
+//     //if number is negative,we need to only look for digits (digits are always positive.)
+//     if(num<0){
+//         num*=-1;
+//     }
+
+//     for(int i=1;i>rem;){   //till there's no remainder remains loop will run (updation is optional in for loop.)
+//         //since in a number only the last digit,i.e.,consonant is not divisible by 10 it will give us the last digit. 
+//         rem= num % 10  ;
+//         sum+=rem;
+//         num=num/10;  //gives quotient , removing the last retrieved digit before next iteration.
+//     }
+//     printf("Sum of the digits of number %d is : %d",num,sum);
+// }
+
+// Write a program in C to accept an integer number and find reverse of this number and 
+// check this number for palindrome.
+
 #include <stdio.h>
 
 void main(){
-    float x,y;
-    printf("Enter the coordinate points x and y respectively:\n");
-    scanf("%f%f",&x,&y);
-    if (x>0&&y>0){
-        printf("(%.2f,%.2f) Point is in the first quadrant.\n",x,y);
+    int original_num,num,rem,reverse=0;
+    printf("Enter the integer number to reverse and check:\t");
+    scanf("%d",&num);
+    original_num=num;  //storing value to compare later.
+    if(num<0){
+        num*=-1;
     }
-    else if (x<0&&y>0){
-        printf("(%.2f,%.2f) Point is in the second quadrant.\n",x,y);
+
+    while(num!=0){  //e.g num=9765
+        rem=num%10;    //first extracting the last digits.(remainder)   //9765%10=5
+        num=num/10;   //removing the last digit from the number.(quotient)  //9765/10=976
+        reverse=reverse*10+rem; //since the last digit extracted will be constant , in reverse it will be tens places further. 
+        //num=9765 (9000+700+60+5)  rev=5679 
+        //1.(0*10+5=5) 2.(5*10*6=56) 3.(56*10+7=567) 4.(567*10+9=5679)      
     }
-    else if (x<0&&y<0){
-        printf("(%.2f,%.2f) Point is in the third quadrant.\n",x,y);
+    printf("The reversed number is: %d\n",reverse);
+
+    //if a num is palindrome , number==reverse.
+    if(original_num==reverse){
+        printf("%d is a palindrome.\n",original_num);
     }
     else{
-        printf("(%.2f,%.2f) Point is in the fourth quadrant .\n",x,y);
+        printf("%d is not a palindrome\n",original_num);
     }
 }
