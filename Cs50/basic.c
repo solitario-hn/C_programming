@@ -634,31 +634,34 @@
 // An Armstrong number (or narcissistic number) is a positive integer that equals the sum of its own digits,
 //  each raised to the power of the total number of digits in that integer
 
-#include <stdio.h>
-#include <math.h>
-void main(){
-    int original_num,num,digits=0,rem=0,sum=0;
-    printf("Enter number to check:\t");
-    scanf("%d",&num);
-    original_num=num;   //to compare original number later
-    //counting the number of digits in the number
-    while(num!=0){
-        rem=num%10;   //gives the last digit.
-        num=num/10;   //as soon as only const is remaining decimal division makes num==0 loop stops.
-        digits+=1;
-    }
-    num=original_num;  //re-setting the num value.
+// #include <stdio.h>
+// #include <math.h>
+// void main(){
+//     int original_num,num,digits=0,rem=0,sum=0;
+//     printf("Enter number to check:\t");
+//     scanf("%d",&num);
+//     original_num=num;   //to compare original number later
+//     //counting the number of digits in the number
+//     while(num!=0){
+//         rem=num%10;   //gives the last digit.
+//         num=num/10;   //as soon as only const is remaining decimal division makes num==0 loop stops.
+//         digits+=1;
+//     }
+//     num=original_num;  //re-setting the num value.
     //An Armstrong number equals the sum of its own digits raised to power of the total number of digits.
-    while(num!=0){
-        rem=num%10;
-        num=num/10;
-        sum+=pow(rem,digits);
-    }
+//     while(num!=0){
+//         rem=num%10;
+//         num=num/10;
+//         sum+=pow(rem,digits);
+//     }
 
-    if(sum==original_num){
-        printf("%d is an Armstrong number.\n",original_num);
-    }
-    else{
-        printf("%d is not an Armstrong number.\n",original_num);
-    }
-}
+//     if(sum==original_num){
+//         printf("%d is an Armstrong number.\n",original_num);
+//     }
+//     else{
+//         printf("%d is not an Armstrong number.\n",original_num);
+//     }
+// }
+
+// Write a program in C to accept an integer numbers and to check a number is Perfect or not.
+void main()
