@@ -664,4 +664,69 @@
 // }
 
 // Write a program in C to accept an integer numbers and to check a number is Perfect or not.
-void main()
+
+//perfect num , num= sum of it's proper divisors excluding that no itself.
+
+// #include <stdio.h>
+
+// void main(){
+//     int sum=0,divisor,num;
+//     printf("Enter the number to check for perfect number:\t");
+//     scanf("%d",&num);
+//     //finding perfect divisors.
+//     for(int i=1;i<num;i++){
+//         if (num%i==0){      //if it properly divides the number it is added into sum.
+//             sum+=i;
+//         }}
+//     if(sum==num){
+//         printf("%d is a perfect number.\n",num);
+//     }
+//     else{
+//         printf("%d is not a perfect number.\n",num);
+//     }
+// }
+
+
+// Write a program to find the sum of following
+// series:
+// S=2+4+6+8+ ………N terms
+// 27 Write a program to check a n
+
+// #include <stdio.h>
+
+// void main(){
+//     int n,sum=0;   //setting sum value 0 to avoid garbage values.
+//     printf("Enter the no. of terms.:\t");
+//     scanf("%d",&n);
+//     for(int i=1;i<=n;i++){
+//         sum+=(2*i);
+//     }
+//     printf("Sum of %d terms of series is: %d.\n",n,sum);
+// }
+
+// Write a program to check a number whether it
+// is prime number or not.
+
+#include <stdio.h>
+
+void main(){
+    int divisors=0,num;
+    printf("Enter number to check:\t");
+    scanf("%d",&num);
+    if(num==1){
+        printf("%d is a neither prime nor composite number.\n",num);
+    }
+    else{
+        for(int i=1;i<=num;i++){
+            if(num%i==0){
+                divisors+=1;
+            }
+        }
+        if(divisors==2){     //if a num is prime sum of its divisors=2
+            printf("%d is a prime number.\n",num);
+        }
+        else{
+            printf("%d is not a prime number.\n",num);
+        }
+    }
+}
