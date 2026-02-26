@@ -772,18 +772,174 @@
 // S=-1^3+ 3^3- 5^3+7^3-9^3+ 11^3-……………..
 // Nterms
 
+// #include <stdio.h>
+
+// int main(){
+//     long long sum=0; int n,step=2,multi=-1;
+//     printf("Enter  the number of terms:\t");
+//     scanf("%d",&n);
+//     int i=1,j=1;
+//     while(j<=n){
+//         sum+=multi*(i*i*i);
+//         multi*=-1;
+//         i+=step;   //since series goes like 1,3,5 increment of 2.
+//         j++;
+//     }
+//     printf("The sum of series upto %d terms : %lld\n",n,sum);
+// }
+
+// Write a program to find the sum offollowing
+// series:
+// S=1/1! +2/2! +3/3!+ ………7terms.
+
+// #include <stdio.h>
+
+// void main(){
+//     long double sum=0,factorial=1.0;
+//     int i=1,j=1;
+//     while(i<=7){
+//         //finding the factorial
+//         while(j<=i){
+//             factorial*=j;
+//             j++;
+//         }
+//         sum+=(i/factorial);
+//         factorial=1;   //setting value of factorial back to 1.
+//         i++;
+//         j=1;   //setting value of j back to 1.
+//     }
+//     printf("Sum of the series upto 7 terms is: %.6Lf\n",sum);
+// }
+
+
+// Write a program to convert binary number to  ---------------------TO-DO
+// decimal number
+
+// Write a program to find the sum of following
+// series:
+// S=1^4+3^4+5^4+7^4+ ……..100 terms
+
+// #include <stdio.h>
+
+// int main(){
+//     long long int sum=0,i=1;
+//     int j=1;
+//     while(j<=100){
+//         sum+=(i*i*i*i);    //since a^4=a*a*a*a.
+//         i+=2;  //only odd numbers.
+//         j++;
+//     }
+//     printf("The sum of the series is: %lld\n",sum);
+// }
+
+// WriteaprograminCtoprintthefollowing pattern:
+// * * *
+// * * *
+// * * *
+
+// #include <stdio.h>
+
+// int main(){
+//     for(int i=0;i<3;i++){
+//         for(int j=0;j<3;j++){
+//             printf("* ");
+//         }
+//         printf("\n");
+//     }
+// }
+
+// Write a program in C to print the following pattern:
+// 1 2 3
+// 1 2 3
+// 1 2 3
+
+// #include <stdio.h>
+
+// void main(){
+//     for(int i=0;i<3;i++){
+//         for(int j=1;j<=3;j++){
+//             printf("%d ",j);   //printing out value of j =1,2,3 
+//         }
+//         printf("\n");   
+//     }
+// }
+
+// WriteaprograminCtoprintthefollowing pattern:
+// 1 1 1
+// 2 2 2
+// 3 3 3
+
+// #include <stdio.h>
+
+// void main(){
+//     for(int i=1;i<=3;i++){
+//         for(int j=0;j<3;j++){
+//             printf("%d ",i);   //printing out value of i =1,2,3 
+//         }
+//         printf("\n");   
+//     }
+// }
+
+// WriteaprograminCtoprintthefollowing pattern:
+// 3 2 1
+// 3 2 1
+// 3 2 1
+
+// #include <stdio.h>
+
+// void main(){
+//     for(int i=0;i<3;i++){
+//         for(int j=3;j>=1;j--){
+//             printf("%d ",j);
+//         }
+//         printf("\n");
+//     }
+// }
+
+// WriteaprograminCtoprintthefollowing pattern:
+// 3 3 3
+// 2 2 2
+// 1 1 1
+
+// #include <stdio.h>
+
+// void main(){
+//     for(int i=3;i>0;i--){
+//         for(int j=0;j<3;j++){
+//             printf("%d ",i);
+//         }
+//         printf("\n");
+//     }
+// }
+
+// WriteaprograminCtoprintthefollowing pattern:
+// *
+// * *
+// * * *
+
+// #include <stdio.h>
+
+// void main(){
+//     for(int i=1;i<=3;i++){
+//         for(int j=0;j<i;j++){
+//             printf("* ");
+//         }
+//         printf("\n");
+//     }
+// }
+
+// WriteaprograminCtoprintthefollowing pattern:
+// 1
+// 1 2
+// 1 2 3
+
 #include <stdio.h>
 
-int main(){
-    long long sum=0; int n,step=2,multi=-1;
-    printf("Enter  the number of terms:\t");
-    scanf("%d",&n);
-    int i=1,j=1;
-    while(j<=n){
-        sum+=multi*(i*i*i);
-        multi*=-1;
-        i+=step;   //since series goes like 1,3,5 increment of 2.
-        j++;
+void main(){
+    for(int i=1;i<=3;i++){
+        for(int j=1;j<=i;j++){
+            printf("%d ",j);    //using j values-1 ; 1,2 ; 1,2,3 comparing to i.
+        }
+        printf("\n");         //moving to the next line.
     }
-    printf("The sum of series upto %d terms : %lld\n",n,sum);
 }
