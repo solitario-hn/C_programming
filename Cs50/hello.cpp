@@ -70,7 +70,7 @@ Fail, otherwise.*/
 //     for (int i=0 ; i<5;i++)
 //     {
 //         cout<<"\n";
-//         for (int i=0;i<5;i++){      //this will run completely first.
+//         for (int j=0;j<5;j++){      //this will run completely first.
 //             cout<<"*";
 //         }
 //     }

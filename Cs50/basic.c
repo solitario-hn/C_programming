@@ -707,26 +707,83 @@
 // Write a program to check a number whether it
 // is prime number or not.
 
+// #include <stdio.h>
+
+// void main(){
+//     int divisors=0,num;
+//     printf("Enter number to check:\t");
+//     scanf("%d",&num);
+//     if(num==1){
+//         printf("%d is a neither prime nor composite number.\n",num);
+//     }
+//     else{
+//         for(int i=1;i<=num;i++){
+//             if(num%i==0){
+//                 divisors+=1;
+//             }
+//         }
+//         if(divisors==2){     //if a num is prime sum of its divisors=2
+//             printf("%d is a prime number.\n",num);
+//         }
+//         else{
+//             printf("%d is not a prime number.\n",num);
+//         }
+//     }
+// }
+
+// Write a program to find the sum of following
+// series: 1–1/2 +1/3–1/4 +1/5-……uptonterms.
+
+// #include  <stdio.h>
+
+// int main(){
+//     int n,step=1; float sum=0;
+//     printf("Enter the number of terms:\t");
+//     scanf("%d",&n);
+//     for(int i=1;i<=n;i++){
+//         sum+=(step*(1.0/i));    //writing 1.0 to avoid integer division by c
+//         step*=-1;           //alternating multiplying terms by -1;
+//     }
+//     printf("The sum of %d terms of the series is %.2f\n",n,sum);
+// }
+
+// Write a program to find the sum of following
+// series: 1!+2! +3! +4!+…..+n
+
+// #include <stdio.h>
+
+// int main(){
+//     int n,sum=0,factorial=1;
+//     printf("Enter the number of terms:\t");
+//     scanf("%d",&n);
+//     //finding each number factorial and then adding it to sum using nested loop.
+//     for(int i=1;i<=n;i++){
+//         for(int j=1;j<=i;j++){
+//             factorial*=j;
+//         }
+//         sum+=factorial;
+//         factorial=1;  //setting factorial back to 1 for next number.
+//     }
+//     printf("The  sum of the series upto %d terms : %d\n",n,sum);
+//     return 0;
+// }
+
+// Write a program to find the sum of following series:
+// S=-1^3+ 3^3- 5^3+7^3-9^3+ 11^3-……………..
+// Nterms
+
 #include <stdio.h>
 
-void main(){
-    int divisors=0,num;
-    printf("Enter number to check:\t");
-    scanf("%d",&num);
-    if(num==1){
-        printf("%d is a neither prime nor composite number.\n",num);
+int main(){
+    long long sum=0; int n,step=2,multi=-1;
+    printf("Enter  the number of terms:\t");
+    scanf("%d",&n);
+    int i=1,j=1;
+    while(j<=n){
+        sum+=multi*(i*i*i);
+        multi*=-1;
+        i+=step;   //since series goes like 1,3,5 increment of 2.
+        j++;
     }
-    else{
-        for(int i=1;i<=num;i++){
-            if(num%i==0){
-                divisors+=1;
-            }
-        }
-        if(divisors==2){     //if a num is prime sum of its divisors=2
-            printf("%d is a prime number.\n",num);
-        }
-        else{
-            printf("%d is not a prime number.\n",num);
-        }
-    }
+    printf("The sum of series upto %d terms : %lld\n",n,sum);
 }
