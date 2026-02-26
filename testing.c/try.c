@@ -6,3 +6,5 @@
 //format specifiers do the work.
 //creating your own strcmp , strlen
 
+
+
