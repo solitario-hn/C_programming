@@ -933,13 +933,82 @@
 // 1 2
 // 1 2 3
 
+// #include <stdio.h>
+
+// void main(){
+//     for(int i=1;i<=3;i++){
+//         for(int j=1;j<=i;j++){
+//             printf("%d ",j);    //using j values-1 ; 1,2 ; 1,2,3 comparing to i.
+//         }
+//         printf("\n");         //moving to the next line.
+//     }
+// }
+
+// WriteaprograminCtoprintthefollowing pattern:
+// 1
+// 2 2
+// 3 3 3
+
+// #include <stdio.h>
+
+// void main(){
+//     for(int i=1;i<=3;i++){
+//         for(int j=1;j<=i;j++){
+//             printf("%d ",i);
+//         }
+//         printf("\n");
+//     }
+// }
+
+
+// Write a program in Ctoprintthefollowing
+// pattern:
+// 3
+// 3 2
+// 3 2 1
+
+
+// #include <stdio.h>
+
+// void main(){
+//     for(int i=3;i>=1;i--){
+//         for(int j=3;j>=i;j--){
+//             printf("%d ",j);   //printing out values of j-3 , 3,2 , 3,2,1. 
+//         }
+//         printf("\n");
+//     }
+// }
+
+// #include <stdio.h>
+
+// int main(){
+//     for(int i = 1; i <= 3; i++){
+//         for(int j = 3; j >= 4 - i; j--){
+//             printf("%d ", j);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+// Write a program in C to print the following
+// pattern:
+// 3
+// 2 2
+// 1 1 1
+
 #include <stdio.h>
 
 void main(){
-    for(int i=1;i<=3;i++){
-        for(int j=1;j<=i;j++){
-            printf("%d ",j);    //using j values-1 ; 1,2 ; 1,2,3 comparing to i.
+    int i=3;
+    while(i>=1){
+        int j=3;
+        while(j>=i){
+            printf("%d ",i);
+            j--;
         }
-        printf("\n");         //moving to the next line.
+        printf("\n");
+        i--;
     }
 }
