@@ -8,3 +8,13 @@
 
 
 
+//POST-FIX AND PRE-FIX OPERATOR
+
+#include <stdio.h>
+
+int main(){
+    int a=1,b=2,c=3;
+    c=a++;
+    b=a++;
+    printf("%d\n%d\n%d\n",a,b,c);
+}

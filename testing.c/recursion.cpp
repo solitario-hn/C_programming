@@ -79,17 +79,65 @@ using namespace std;
 //     return 0;
 // }
 
+// -----EASY METHOD TO REVERSE AN ARRAY -SWAP SORT
+
+// int main(){
+//     int array[10]={1,2,3,4,5,6,7,8,9,10};
+//     int rev[10]={};
+//     for(int i=0;i<(10/2);i++){
+//         int temp=array[i];
+//         array[i]=array[10-1-i];
+//         array[10-1-i]=temp;
+//     }
+
+//     for(int j=0;j<10;j++){
+//         cout<<array[j]<<"\n";
+//     }
+// }
+
+
+//PALINDROME
+
+// int palindrome(int n,int rev);
+// int main(){
+//     int n=221;
+//     int rev=0;
+//     int result=palindrome(n,rev);
+//     if(result==n){
+//         cout<<n<<" IS PALINDROME.\n";
+//        }
+//     else{
+//         cout<<n<<" IS NOT A PALINDROME.\n";
+//     }
+
+// }
+
+
+// int palindrome(int n,int rev){
+//     if(n==0){
+//         return rev;
+//     }   
+//     int rem=n%10;  //extracting the last digit.
+//     rev=(rev*10)+rem;
+//     n=n/10;
+//     return palindrome(n,rev);    
+// }
+
+
+//FIBONAACCII SERIES
+
+void fibonacci(int n, int term1, int term2){
+    if(n == 0){
+        cout<<"\nEND OF SERIES.";
+        return;
+    }
+
+    cout << term1 << " , ";
+
+    fibonacci(n-1, term2, term1 + term2);
+}
 
 int main(){
-    int array[10]={1,2,3,4,5,6,7,8,9,10};
-    int rev[10]={};
-    for(int i=0;i<5;i++){
-        int temp=array[i];
-        array[i]=array[10-1-i];
-        array[10-1-i]=temp;
-    }
-
-    for(int j=0;j<10;j++){
-        cout<<array[j]<<"\n";
-    }
+    int n = 10;
+    fibonacci(n, 0, 1);
 }
