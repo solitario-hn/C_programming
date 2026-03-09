@@ -124,20 +124,22 @@ using namespace std;
 // }
 
 
-//FIBONAACCII SERIES
+//PRINTING FIBONAACCII SERIES UPTO N TERMS. 
 
-void fibonacci(int n, int term1, int term2){
-    if(n == 0){
-        cout<<"\nEND OF SERIES.";
-        return;
-    }
+// void fibonacci(int n, int term1, int term2){
+//     if(n == 0){
+//         cout<<"\nEND OF SERIES.";
+//         return;
+//     }
 
-    cout << term1 << " , ";
+//     cout << term1 << " , ";
 
-    fibonacci(n-1, term2, term1 + term2);
-}
+//     fibonacci(n-1, term2, term1 + term2);
+// }
 
-int main(){
-    int n = 10;
-    fibonacci(n, 0, 1);
-}
+// int main(){
+//     int n = 10;
+//     fibonacci(n, 0, 1);
+// }
+
+

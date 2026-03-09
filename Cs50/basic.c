@@ -998,17 +998,4 @@
 // 2 2
 // 1 1 1
 
-#include <stdio.h>
-
-void main(){
-    int i=3;
-    while(i>=1){
-        int j=3;
-        while(j>=i){
-            printf("%d ",i);
-            j--;
-        }
-        printf("\n");
-        i--;
-    }
-}
+// 
