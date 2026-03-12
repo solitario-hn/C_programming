@@ -93,29 +93,71 @@ using namespace std;
 
 //Rotate array by K elements
 
-
+void rotate_right(int arr[], int n,int k);
+void reverse(int arr[],int n,int k);
 
 int main(){
-    int arr[5]={5,4,3,2,1};  //4/3/2/1/5
-    int temp[5]={};
-
-    int i=0;
+    int arr[5]={5,4,3,2,1};
     int n=5;
-    while(n){
-        if(i>=(n-3)){
-            temp[i]=arr[n-3-i];
-        }
-        temp[i]=arr[i+3];   //4,3,2,1,
-        i++;     
-    }
-    cout<<"\n";
-    //rotated arry
-    for(int j=0;j<5;j++){
-        cout<<temp[j]<<",";
-    }
-    cout<<"\n";
+    int k=2;
+    // rotate_right(arr,n,k);
+    reverse(arr,n,k);
+    return 0;   
 }
 
+
+
+void rotate_right(int arr[], int n,int k){  //21543
+    k=k%n;
+    int temp[k]={};
+    int j=0;
+    for(int i=n-k;i<n;i++){
+        temp[j]=arr[i];   
+        j++;    
+    }
+
+    for(int i=n-k-1;i>=0;i--){
+        arr[i+k]=arr[i];
+    }
+    //putting temporary back into the array
+
+    for(int i=0;i<k;i++){
+        arr[i]=temp[i];
+    }  
+}
+
+void reverse(int arr[],int n,int k){
+    int j=n/2;
+
+    for(int i=0;i<2;i++){
+        int temp=arr[i];
+        arr[i]=arr[n-1];
+        arr[n-1]=temp;
+        n--;
+    }
+
+    for(int i=0;i<k/2;i++){
+        int temp=arr[i];
+        arr[i]=arr[k-1];
+        arr[k-1]=temp;
+        k--;
+    }
+    n=5;
+    k=2;
+
+    for(int i=n-k-1;i<=(n/2);i++){
+        int temp=arr[i];
+        arr[i]=arr[n-1];
+        arr[n-1]=temp;
+        n--;
+    }
+
+
+    for(int i=0;i<5;i++){
+        cout<<arr[i]<<';';
+    }
+
+}
 
 
 
