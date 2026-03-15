@@ -115,35 +115,62 @@
 
 /// Given two sorted arrays, arr1, and arr2 of size n and m. Find the union of two sorted arrays.
 
+// #include <iostream>
+// #include <map>
+// using namespace std;
+
+// int main(){
+//     int n = 5,m = 5;
+//     int arr1[n] = {1,2,3,4,5};
+//     int arr2[m] = {2,3,4,4,5};
+//     map<int,int>temp;
+
+//     //looping through arr1
+//     for(int i=0;i<n;i++){
+//         auto test=temp.find(arr1[i]);
+//         if(test->second==0){
+//             temp.insert({arr1[i],1});
+
+//         }
+//     }
+//     //looping through arr2
+//     for(int j=0;j<m;j++){
+//         auto test=temp.find(arr2[j]);
+//         if(test->second==0){
+//             temp.insert({arr2[j],1});
+//         }
+//     }
+
+//     //printing out the union
+//     for(auto it : temp){
+//         cout<<it.first<<',';
+//     }
+// }
+
+
+//Longest Subarray with given Sum K(Positives)
+
 #include <iostream>
-#include <map>
 using namespace std;
 
 int main(){
-    int n = 5,m = 5;
-    int arr1[n] = {1,2,3,4,5};
-    int arr2[m] = {2,3,4,4,5};
-    map<int,int>temp;
+    int n=6,k=15,len=0,sum=0,max_len=0;
+    int arr[n] = {10, 5, 2, 7, 1, 9};
 
-    //looping through arr1
     for(int i=0;i<n;i++){
-        auto test=temp.find(arr1[i]);
-        if(test->second==0){
-            temp.insert({arr1[i],1});
-
+        for(int j=i;j<n;j++){
+            sum+=arr[j];
+            if(sum==k){
+                len=j-i+1;
+                if(len>max_len){
+                    max_len=len;
+                }   
+                sum=0;          
+                break;
+            }
+            
         }
     }
 
-    //looping through arr2
-    for(int j=0;j<m;j++){
-        auto test=temp.find(arr2[j]);
-        if(test->second==0){
-            temp.insert({arr2[j],1});
-        }
-    }
-
-    //printing out the union
-    for(auto it : temp){
-        cout<<it.first<<',';
-    }
+    cout<<max_len<<"\n";
 }
