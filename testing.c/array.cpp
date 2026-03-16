@@ -150,27 +150,131 @@
 
 //Longest Subarray with given Sum K(Positives)
 
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int n=6,k=15,len=0,sum=0,max_len=0;
+//     int arr[n] = {10, 5, 2, 7, 1, 9};
+
+//     for(int i=0;i<n;i++){
+//         for(int j=i;j<n;j++){
+//             sum+=arr[j];
+//             if(sum==k){
+//                 len=j-i+1;
+//                 if(len>max_len){
+//                     max_len=len;
+//                 }   
+//                 sum=0;          
+//                 break;
+//             }       
+//         }
+//     }
+
+//     cout<<max_len<<"\n";
+// }
+
+// Two Sum : Check if a pair with given sum exists in Array
+// Given an array of integers arr[] and an integer target.
+
+// Return YES if there exist two numbers such that their sum is equal to the target. Otherwise, return NO.
+
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int sum=0,n=5,k=14;
+
+//     int arr[n] = {2,6,5,8,11};
+
+//     for(int i=0;i<n;i++){
+//         for(int j=i+1;j<n;j++){
+//             if(arr[i]+arr[j]==k){
+//                 cout<<"THE SUM OF TWO NUMBERS\n";
+//                 cout<<arr[i]<<','<<arr[j]<<"\n";
+//                 break;
+//             }
+//         }
+//     }
+// }
+
+
+// #include <iostream>
+// #include <map>
+// using namespace std;
+
+// int main(){
+//     int n=5,k=19;
+//     int arr[n] = {2,6,5,8,11};
+
+//     map<int,int>num;
+//     //looping through array
+//     for(int i=0;i<n;i++){
+//         int diff=k-arr[i];
+//         auto test=num.find(diff);  //DONE BY ME
+//         if(test->first==0){
+//             num.insert({arr[i],i});
+//         }
+//         else{
+//             cout<<"\n"<<arr[i]<<','<<diff;
+//             cout<<"\n";
+//             break;
+//         }   
+// }}
+
+
+// ///        for(int j=)
+//         if(arr[i]<arr[i+1]){
+//             int temp=arr[i+1];
+//             arr[i+1]=arr[i];
+//             arr[i]=temp;
+//         }////
+
+//Sort an array of 0s, 1s and 2s
+
 #include <iostream>
 using namespace std;
 
 int main(){
-    int n=6,k=15,len=0,sum=0,max_len=0;
-    int arr[n] = {10, 5, 2, 7, 1, 9};
+    int n=5,count_zero=0,count_one=0,count_two=0;
+
+    int arr[n]={1, 0, 2, 1, 0};
 
     for(int i=0;i<n;i++){
-        for(int j=i;j<n;j++){
-            sum+=arr[j];
-            if(sum==k){
-                len=j-i+1;
-                if(len>max_len){
-                    max_len=len;
-                }   
-                sum=0;          
-                break;
-            }
-            
+        if(arr[i]==0){
+            count_zero++;
+        }
+        else if(arr[i]==1){
+            count_one++;
+        }
+        else{
+            count_two++;
+        }        
+    }
+
+    int i=0;
+    while(i<n){
+        if(count_zero!=0){
+            arr[i]=0;
+            i++;
+            count_zero--;
+        }
+        else if(count_one!=0){
+            arr[i]=1;
+            i++;
+            count_one--;          
+        }
+        else{
+            arr[i]=2;
+            i++;
+            count_two--;          
         }
     }
 
-    cout<<max_len<<"\n";
+
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<',';
+    }
+
+    cout<<"\n";
 }
