@@ -223,12 +223,6 @@
 // }}
 
 
-// ///        for(int j=)
-//         if(arr[i]<arr[i+1]){
-//             int temp=arr[i+1];
-//             arr[i+1]=arr[i];
-//             arr[i]=temp;
-//         }////
 
 //Sort an array of 0s, 1s and 2s
 
