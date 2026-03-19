@@ -24,13 +24,23 @@ int main() {
 //Remember: The compiler ignores white spaces. However, multiple lines makes the code more readable.
 //WHEN IN C , WE USE "line of text"  double quotation for multiple words ALWAYS.
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main() {
-  printf("Hello World!\t\t");   //        '\t' 	Creates a horizontal tab ,'\\' 	Inserts a backslash character (\) 
-  printf("\"I am learning \\C.\"");   //         '\"  ' 	Inserts a double quote character
-  return 0;
-}
+// int main() {
+//   printf("Hello World!\t\t");   //        '\t' 	Creates a horizontal tab ,'\\' 	Inserts a backslash character (\) 
+//   printf("\"I am learning \\C.\"");   //         '\"  ' 	Inserts a double quote character
+//   return 0;
+// }
 
 //OUTPUT-- Hello World!            "I am learning \C."
 
+
+#include <stdio.h>
+
+int main(){
+  float radius3;
+  printf("Enter the radius.\n");
+  scanf("%f",&radius3);
+  printf("DIA: %.2f \n Area: %.2f \n Circumference: %.2f",2*radius3,3.14*radius3*radius3,2*3.14*radius3);
+  return 0;
+}
