@@ -40,5 +40,7 @@
 
 #include <stdio.h>
 int main(){
-    
+    int a,b;
+    printf("hey:");
+    scanf("%d",&a,&b);
 }
