@@ -37,10 +37,3 @@
 
 //1year=12 months
 //1 month=30 days
-
-#include <stdio.h>
-int main(){
-    int a,b;
-    printf("hey:");
-    scanf("%d",&a,&b);
-}
