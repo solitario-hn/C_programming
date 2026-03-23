@@ -226,49 +226,10 @@
 
 //Sort an array of 0s, 1s and 2s
 
-#include <iostream>
-using namespace std;
-
-int main(){
-    int n=5,count_zero=0,count_one=0,count_two=0;
-
-    int arr[n]={1, 0, 2, 1, 0};
-
-    for(int i=0;i<n;i++){
-        if(arr[i]==0){
-            count_zero++;
-        }
-        else if(arr[i]==1){
-            count_one++;
-        }
-        else{
-            count_two++;
-        }        
-    }
-
-    int i=0;
-    while(i<n){
-        if(count_zero!=0){
-            arr[i]=0;
-            i++;
-            count_zero--;
-        }
-        else if(count_one!=0){
-            arr[i]=1;
-            i++;
-            count_one--;          
-        }
-        else{
-            arr[i]=2;
-            i++;
-            count_two--;          
-        }
-    }
+// 
 
 
-    for(int i=0;i<n;i++){
-        cout<<arr[i]<<',';
-    }
 
-    cout<<"\n";
-}
+
+
+

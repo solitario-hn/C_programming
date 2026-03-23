@@ -94,29 +94,178 @@
 //There’s an array ‘A’ of size ‘N’ with an equal number of positive and negative elements. Without altering the relative order of positive and negative elements, 
 //you must return an array of alternately positive and negative values.
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main(){
+//     vector<int> nums={1,2,-3,-1,-2,3};
+//     vector<int> result(nums.size(),0);   //we need to first initialize the result array with said size of nums in order to change its values later.
+    
+//     int posindex=0;   //since positive elemnts start from 0th index and neg from 1th.
+//     int negindex=1;
+
+//     for(int i=0;i<nums.size();i++){
+//         if(nums[i]>0){
+//             result[posindex]=nums[i];      //storing the positive elemnet found first at0th index.
+//             posindex+=2;      //increasing posindex.
+//         }
+//         else{
+//             result[negindex]=nums[i];
+//             negindex+=2;
+//         }
+//     }
+
+//     for(auto it:result){
+//         cout<<it<<endl;
+//     }
+// }
+
+
+//next_permutation : find next lexicographically greater permutation
+// Problem Statement:
+// Given an array Arr[] of integers, rearrange the numbers of the given array into the lexicographically next greater permutation of numbers.
+
+// If such an arrangement is not possible, it must rearrange to the lowest possible order (i.e., sorted in ascending order).
+
+
+// 
+
+
+// #include <iostream>
+// #include <vector>
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// int main(){
+//     vector<int> arr={1,3,2}; 
+//     int point=0;
+
+// //Traverse from the end and find the first index where the current digit is smaller than the next one (this is the "breaking point").
+// //Then again traverse from the end to find the first digit greater than the breaking point digit and swap them.
+// //finally reverse the array to the right of the breaing point.
+//     for(int i=(arr.size()-1);i>0;i--){
+//         if(arr[i-1]<arr[i]){
+//             point=i-1;
+//             for(int j=(arr.size()-1);i>=0;i--){
+//                 if(arr[j]>arr[point]){
+//                     int temp=arr[j];
+//                     arr[j]=point;
+//                     point=temp;
+//                     //reversing the remaining array.
+//                     reverse(arr.begin()+point+1,arr.end());
+//                     break;
+//                 }
+//             }
+//             break;
+//         }
+//         break;
+//     }
+
+//     if(point==0){
+//         reverse(arr.begin(),arr.end());
+//         for(auto it:arr){
+//             cout<<it<<',';
+//         }
+//     }
+//     else{
+//         for(auto it:arr){
+//             cout<<it<<',';
+//         }
+//     }
+
+//     cout<<endl;
+// }
+
+
+//Leaders in an Array
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main(){
+
+//     vector<int> nums={4,3,1,7,5,0};
+//     vector<int> leaders;
+//     int score=1;
+
+//     for(int i=0;i<nums.size();i++){
+//         for(int j=(i+1);j<nums.size();j++){
+//             if(nums[i]<=nums[j]){
+//                 score=0;
+//                 break;
+//             }
+//         }
+//         if(score==1){
+//             leaders.push_back(nums[i]);
+//         }
+//         else{
+//             score=1;
+//         }
+//     }
+
+
+//     for(auto it:leaders){
+//         cout<<it<<',';
+//     }
+//     cout<<endl;
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Longest Consecutive Sequence in an Array
+
+
+// 13
+
+// Problem Statement: Given an array nums of n integers.
+
+// Return the length of the longest sequence of consecutive integers. The integers in this sequence can appear in any order.
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
 int main(){
-    vector<int> nums={1,2,-3,-1,-2,3};
-    vector<int> result(nums.size(),0);   //we need to first initialize the result array with said size of nums in order to change its values later.
-    
-    int posindex=0;   //since positive elemnts start from 0th index and neg from 1th.
-    int negindex=1;
+    vector<int> nums={100, 4, 200, 1, 3, 2};
+    vector<int> result;
 
-    for(int i=0;i<nums.size();i++){
-        if(nums[i]>0){
-            result[posindex]=nums[i];      //storing the positive elemnet found first at0th index.
-            posindex+=2;      //increasing posindex.
-        }
-        else{
-            result[negindex]=nums[i];
-            negindex+=2;
-        }
-    }
+    int i=0;
+    int to_check=i;
 
-    for(auto it:result){
-        cout<<it<<endl;
+
+    for(i=0;i<nums.size();i++){
+        to_check=
     }
 }
+
+
+
+
