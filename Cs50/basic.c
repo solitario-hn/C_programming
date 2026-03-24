@@ -999,3 +999,17 @@
 // 1 1 1
 
 // 
+
+#include <stdio.h>
+int main(){
+    char c;
+    printf("Enter the char:");
+    scanf("%c",&c);
+
+    for(int i=0;i<=5;i++){
+        printf("%c     %d\n",c+i,c+i);
+
+    }
+
+    return 0;
+}
