@@ -253,17 +253,30 @@
 #include <vector>
 using namespace std;
 
+int consecutive(vector<int> nums,int to_check,int count);
+
 int main(){
     vector<int> nums={100, 4, 200, 1, 3, 2};
     vector<int> result;
 
-    int i=0;
-    int to_check=i;
+    int count=1;
 
-
-    for(i=0;i<nums.size();i++){
-        to_check=
+    for(int i=0;i<nums.size();i++){
+        int to_check=nums[i];
+        count=consecutive(nums,to_check,count);      
     }
+    cout<<count<<'\n';
+}
+
+int consecutive(vector<int> nums,int to_check,int count){
+    for(int j=0;j<nums.size();j++){
+        if(nums[j]==(to_check+1)){
+            to_check=nums[j];
+            count++;
+            consecutive(nums,to_check,count);
+        }
+    }
+    return count;
 }
 
 
