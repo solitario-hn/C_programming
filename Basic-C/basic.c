@@ -35,12 +35,14 @@ int main() {
 //OUTPUT-- Hello World!            "I am learning \C."
 
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(){
-  float radius3;
-  printf("Enter the radius.\n");
-  scanf("%f",&radius3);
-  printf("DIA: %.2f \n Area: %.2f \n Circumference: %.2f",2*radius3,3.14*radius3*radius3,2*3.14*radius3);
-  return 0;
-}
+// int main(){
+//   float radius3;
+//   printf("Enter the radius.\n");
+//   scanf("%f",&radius3);
+//   printf("DIA: %.2f \n Area: %.2f \n Circumference: %.2f",2*radius3,3.14*radius3*radius3,2*3.14*radius3);
+//   return 0;
+// }
+
+
