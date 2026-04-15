@@ -38,35 +38,35 @@
 
 // 
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main() {
-    int n,i=0;
-    printf("Enter the no. of elements in array: ");
-    scanf("%d",&n);
-    float arr[n];
-    //taking user input for elements in array
-    while(i<n){
-        printf("Enter the %d element of array: ",i+1);
-        scanf("%f",&arr[i]); 
-        i++;
-    }
-    float min = arr[0],max = arr[0];
-    int minIndex = 0, maxIndex = 0;
+// int main() {
+//     int n,i=0;
+//     printf("Enter the no. of elements in array: ");
+//     scanf("%d",&n);
+//     float arr[n];
+//     //taking user input for elements in array
+//     while(i<n){
+//         printf("Enter the %d element of array: ",i+1);
+//         scanf("%f",&arr[i]); 
+//         i++;
+//     }
+//     float min = arr[0],max = arr[0];
+//     int minIndex = 0, maxIndex = 0;
 
-    for(int j = 1; j< n; j++) {
-        if(arr[i] < min) {
-            min = arr[i];
-            minIndex = i;
-        }
+//     for(int j = 1; j< n; j++) {
+//         if(arr[i] < min) {
+//             min = arr[i];
+//             minIndex = i;
+//         }
 
-        if(arr[i] > max) {
-            max = arr[i];
-            maxIndex = i;
-        }
-    }
+//         if(arr[i] > max) {
+//             max = arr[i];
+//             maxIndex = i;
+//         }
+//     }
 
-    printf("Index of smallest element: %d\n", minIndex);
-    printf("Index of largest element: %d\n", maxIndex);
-    return 0;
-}
+//     printf("Index of smallest element: %d\n", minIndex);
+//     printf("Index of largest element: %d\n", maxIndex);
+//     return 0;
+// }
