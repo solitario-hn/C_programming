@@ -1,0 +1,4 @@
+hello 
+this is a sample file 
+for c programming.
+DATED-22/04/2026
